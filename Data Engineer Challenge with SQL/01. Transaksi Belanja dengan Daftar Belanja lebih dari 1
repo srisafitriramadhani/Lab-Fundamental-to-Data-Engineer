@@ -1,0 +1,17 @@
+SELECT
+    tr.kode_transaksi,
+    tr.kode_pelanggan,
+    ms.nama_pelanggan,
+    tr.tanggal_transaksi,
+    COUNT(td.qty) AS jumlah_detail
+FROM
+    tr_penjualan tr
+    INNER JOIN ms_pelanggan ms ON tr.kode_pelanggan = ms.kode_pelanggan
+    INNER JOIN tr_penjualan_detail td ON tr.kode_transaksi = td.kode_transaksi
+GROUP BY
+    tr.kode_transaksi,
+    tr.kode_pelanggan,
+    ms.nama_pelanggan,
+    tr.tanggal_transaksi
+HAVING
+    jumlah_detail > 1;
