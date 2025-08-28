@@ -1,0 +1,1 @@
+SELECT * FROM ms_produk WHERE nama_produk = 'Flashdisk DQLab 64 GB' or nama_produk = 'Tas Travel Organizer DQLab' or nama_produk = 'Gantungan Kunci DQLab';
