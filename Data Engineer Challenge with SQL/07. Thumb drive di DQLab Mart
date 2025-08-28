@@ -1,0 +1,4 @@
+SELECT no_urut, kode_produk,nama_produk, harga 
+FROM ms_produk 
+WHERE nama_produk 
+LIKE '%Flashdisk%';
