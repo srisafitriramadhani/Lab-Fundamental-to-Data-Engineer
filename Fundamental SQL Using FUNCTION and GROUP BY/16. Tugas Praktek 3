@@ -1,0 +1,1 @@
+SELECT MIN(Semester1) as Min1, MAX(Semester1) as MAX1, MIN(Semester2) as Min2, MAX(Semester2) as MAX2 FROM students;
